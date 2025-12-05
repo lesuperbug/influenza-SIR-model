@@ -1,0 +1,4 @@
+# Ignore school-related files
+*.pptx
+*.docx
+*.pdf
