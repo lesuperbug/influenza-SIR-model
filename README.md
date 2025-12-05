@@ -7,14 +7,15 @@ This project implements and calibrates a Susceptible–Infectious–Recovered (S
 The script:
 
 - Defines the SIR system of differential equations 
-- Fits transmission (`β`) and recovery (`γ`) parameters using least-squares minimization
-- Imports real influenza case data from Excel  
-- Compares the fitted model to observed cases and analyzes residuals  
+- Estimates the transmission and recovery parameters using nonlinear least-squares.
+- Loads real weekly case counts from Excel. 
+- Compares the model’s fitted trajectory to observed data.
+- Produces residual diagnostics and system-evolution plots.
 
 ## Outputs
 
-The script produces:
+This repository includes:
 
-- Observed vs. fitted infection curves  
-- Residual diagnostics  
-- Infection and recovery trajectories from the calibrated SIR model
+- Observed vs. fitted infection curve 
+- Residual plot showing model error structure
+- Evolution of the infected and recovered populations under the fitted parameters

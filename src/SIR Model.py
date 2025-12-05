@@ -90,7 +90,6 @@ plt.title("Model Fit: Infected Individuals")
 plt.savefig("../output/fit_curve.png", dpi=300, bbox_inches="tight")   
 plt.show()
 
-
 # %% Plotting our Residuals
 
 zero_line = [0 for i in range(52)]
