@@ -29,7 +29,7 @@ def SIR_model(y0, tspan, population, beta, gamma):
 
 # %% Import Data
 
-inc_data = pd.read_excel("Sources/2017 - 2018 Flu Data (Manual Extract).xlsx")
+inc_data = pd.read_excel("../data/2017 - 2018 Flu Data (Manual Extract).xlsx")
 inc_data = inc_data.loc[:, ['Week', 'Cases']]
 
 # %% Initial Conditions and Other Preliminaries
@@ -87,7 +87,9 @@ plt.legend()
 plt.xlabel("Weeks")
 plt.ylabel("Cases")
 plt.title("Model Fit: Infected Individuals")
+plt.savefig("../output/fit_curve.png", dpi=300, bbox_inches="tight")   
 plt.show()
+
 
 # %% Plotting our Residuals
 
@@ -98,6 +100,8 @@ plt.scatter(solution[:, 1], residuals, color = 'r')
 plt.xlabel("Fitted Value")
 plt.ylabel("Residuals")
 plt.title("Residuals of Fitted Infection Values")
+plt.savefig("../output/residuals_fit.png", dpi=300, bbox_inches="tight")   
+plt.show()
 
 # %% Plotting the Results
 
@@ -108,4 +112,5 @@ plt.legend()
 plt.xlabel("Weeks")
 plt.ylabel("Count")
 plt.title("# of Infected / Recovered")
+plt.savefig("../output/sir_evolution.png", dpi=300, bbox_inches="tight")
 plt.show()
